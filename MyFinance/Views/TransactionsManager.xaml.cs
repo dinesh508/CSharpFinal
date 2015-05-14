@@ -23,7 +23,10 @@ namespace MyFinance.Views
     {
         public TransactionsManager()
         {
+            
             InitializeComponent();
+            this.Background = System.Windows.Media.Brushes.Red;
+            
         }
 
         private void SaveChanges(object sender, RoutedEventArgs e)

@@ -38,7 +38,7 @@
         <!--Payee Name-->
         <TextBlock Text="BALANCE" Grid.Row="2" Grid.Column="0" Margin="20,10,10,10" />
         <TextBox Width="150" controls:TextBoxHelper.Watermark="enter opening balance"
-                 Grid.Row="2" Grid.Column="1" Margin="10,10,0,10" IsReadOnly="{Binding IsEdit}" HorizontalAlignment="Left" >
+                 Grid.Row="2" Grid.Column="1" Margin="10,10,0,10" HorizontalAlignment="Left" >
             <TextBox.Text>
                 <Binding Path="Balance" StringFormat="N2" UpdateSourceTrigger="PropertyChanged" Mode="TwoWay">
                     <Binding.ValidationRules>

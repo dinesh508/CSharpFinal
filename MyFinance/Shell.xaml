@@ -122,7 +122,7 @@
                   CanUserAddRows="False" CanUserDeleteRows="False" CanUserResizeRows="False"
                   ItemsSource="{Binding Accounts}" IsReadOnly="True" AutoGenerateColumns="False">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Account Name" Binding="{Binding AccountName}" Width="2*" />
+                <DataGridTextColumn Header="Bank Name" Binding="{Binding AccountName}" Width="2*" />
                 <DataGridTextColumn Header="Payee Name" Binding="{Binding PayeeName}" Width="Auto" />
                 <DataGridTemplateColumn Header="Account Type" Width="Auto">
                     <DataGridTemplateColumn.CellTemplate>

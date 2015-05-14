@@ -8,6 +8,7 @@ using System.Windows;
 using MahApps.Metro.Controls.Dialogs;
 using MyFinance.ViewModels;
 using MyFinance.Views;
+using System.Windows.Media;
 
 namespace MyFinance
 {
@@ -137,6 +138,7 @@ namespace MyFinance
 
         private void TransactionClicked(object sender, RoutedEventArgs e)
         {
+            //TransactionsView.BackgroundProperty = System.Windows.Media.Brushes.Red;
             var accVm = ((FrameworkElement)sender).DataContext as AccountViewModel;
 
             if (accVm != null)
