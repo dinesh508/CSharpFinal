@@ -1,0 +1,27 @@
+﻿<controls:MetroWindow x:Class="MyFinance.Views.ChartView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        IsCloseButtonEnabled="True" IsMaxRestoreButtonEnabled="False" IsMinButtonEnabled="False"
+        BorderBrush="{DynamicResource AccentColorBrush}" 
+        GlowBrush="{DynamicResource AccentColorBrush3}"
+        WindowState="Normal" WindowStartupLocation="CenterScreen"
+        DataContext="{Binding}"
+        xmlns:chart="clr-namespace:De.TorstenMandelkow.MetroChart;assembly=De.TorstenMandelkow.MetroChart"
+        Title="ChartView" MinHeight="300" MinWidth="300" Height="350" Width="600">
+    <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+
+        <chart:ClusteredColumnChart 
+            ChartSubTitle="Net Balance across all banks"
+            ChartTitle="Your Networth">
+            <chart:ClusteredColumnChart.Series>
+                <chart:ChartSeries DisplayMember="AccountName"
+                                   ItemsSource="{Binding Path=Accounts}"
+                                   SeriesTitle="Net Balance"
+                                   ValueMember="NetBalance" />
+
+            </chart:ClusteredColumnChart.Series>
+        </chart:ClusteredColumnChart>
+
+    </Grid>
+</controls:MetroWindow>
